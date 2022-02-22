@@ -10,6 +10,8 @@ function setLineHeight() {
     }
     chrome.storage.sync.get("lineHeight", ({ lineHeight }) => {
         const remValue = `${lineHeight}rem`
+        // YouTube comments are a bit more squished than normal paragraphs,
+        // so we'll increase the line height by a greater factor.
         const heightFactor = 1.5
         const youTubeRemValue = `${lineHeight * heightFactor}rem`
 
@@ -28,8 +30,6 @@ function setLineHeight() {
 
         if (youTubeComments !== null) {
             for (const comment of youTubeComments) {
-                // YouTube comments are a bit more squished than normal paragraphs,
-                // so we'll increase the line height by a greater factor.
                 adjustStyle(comment, `${youTubeRemValue}rem`)
             }
         }
