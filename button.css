@@ -1,19 +1,87 @@
-button {
-    height: 30px;
-    width: 30px;
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000 linear-gradient(70deg, #1e015e 0%, #62186b 100%) no-repeat;
+    user-select: none;
+    padding: 1rem 2rem;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #7e0da1;
+    font-size: 1rem;
+}
+.box-minmax {
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: rgba(182,182,182,0.5);
+}
+.box-minmax span:first-child {
+    margin-left: 10px;
+}
+.range-slider {
+    padding: 0.5rem 0;
+    height: 2.5rem;
+}
+#line-height-range {
+    width: 200px;
+    -webkit-appearance: none;
+}
+#line-height-range:focus {
     outline: none;
-    margin: 10px;
-    border: 3px solid #a8a8a8;
-    border-radius: 1rem;
-    background: grey;
-    transition: all 0.3s ease-in-out;
 }
-button:hover {
-    background: gold;
-    border: 3px solid indianred;
+#line-height-range::-webkit-slider-runnable-track {
+    user-select: inherit;
+    width: 50%;
+    height: 0.5rem;
+    cursor: pointer;
+    box-shadow: none;
+    background: indianred;
+    border-radius: 0;
+    border: 0 solid #010101;
+}
+#line-height-range::-webkit-slider-thumb {
+    user-select: inherit;
+    border: 0 solid #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    height: 1.7rem;
+    width: 1.2rem;
+    border-radius: 0.1rem;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.rs-label {
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: transparent;
+    text-align: center;
+    box-sizing: border-box;
+    color: gold;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1.2rem;
+}
 
+#line-height-range::-webkit-slider-thumb:hover {
+    background: gold;
+    transform: scale(1.3);
 }
-button.current {
-    box-shadow: 0 0 0 2px white,
-    0 0 0 4px black;
+
+#line-height-range::-webkit-slider-thumb,
+#line-height-range::-webkit-slider-runnable-track,
+.container {
+    transition: all 0.3s ease-in-out;
 }

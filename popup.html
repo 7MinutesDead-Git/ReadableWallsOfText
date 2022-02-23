@@ -4,7 +4,19 @@
   <link rel="stylesheet" href="button.css">
 </head>
 <body>
-  <button id="btn-line-height"></button>
+  <div class="container">
+    Line Spacing
+    <div class="range-slider">
+      <span id="rs-bullet" class="rs-label"></span>
+      <input type="range" id="line-height-range" value="1.6" min="1.0" max="5.0" step="0.2">
+    </div>
+
+    <div class="box-minmax">
+      <span>1.0</span>
+      <span>5.0</span>
+    </div>
+
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
