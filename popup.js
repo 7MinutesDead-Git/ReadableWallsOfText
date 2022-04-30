@@ -1,3 +1,4 @@
+// -------------------------------------------------------------------------------------
 // Set the user preferred line height for paragraphs, spans, list items, and
 // even YouTube comments.
 // The body of this function will be executed as a content script inside the
